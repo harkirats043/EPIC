@@ -2,6 +2,7 @@
 // DEPENDENCIES
 ////////////////////////////////
 
+
 // initialize .env variables
 require("dotenv").config();
 
@@ -13,6 +14,11 @@ const express = require("express");
 
 // create application object
 const app = express();
+
+
+app.use(cors()); // to minimize cors errors, open access to all origins
+app.use(morgan("dev")); // logging for development
+
 
 ///////////////////////////////
 // ROUTES
