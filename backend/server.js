@@ -1,20 +1,21 @@
 ///////////////////////////////
 // DEPENDENCIES
-////////////////////////////////
-
-
+const cors = require('cors')
+const morgan = require('morgan')
+const express = require('express');
+const mongoose = require('mongoose');
+const imageRoutes = require('./routes/imageRoutes');
 // initialize .env variables
 require("dotenv").config();
 
 // pull PORT from .env, give default value of 4000 and establish DB Connection
 const { PORT } = process.env;
 
-// import express
-const express = require("express");
-
 // create application object
 const app = express();
+app.use(express.json());
 
+app.use('/api', imageRoutes);
 
 app.use(cors()); // to minimize cors errors, open access to all origins
 app.use(morgan("dev")); // logging for development
