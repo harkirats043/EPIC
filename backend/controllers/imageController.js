@@ -1,45 +1,22 @@
-
 require("dotenv").config();
-const https = require('https');
-const apiKey = 'kbB2NJ9E3cmLyeyTzNvhO7hRynvpbnVzWwDDD3Ds';
+// const https = require('https');
+const apiKey = process.env.API_KEY;
 
 const getAllImages = async (req, res) => {
+    const imageArr = [];
   const apiUrl = `https://api.nasa.gov/EPIC/api/natural/images?api_key=${apiKey}`;
-  
-  const fetchData = (url, apiKey) => {
-    return new Promise((resolve, reject) => {
-      const req = https.get(`${url}?api_key=${apiKey}`, (res) => {
-        let data = Buffer.from([]);
 
-        res.on('data', (chunk) => {
-          data = Buffer.concat([data, chunk]);
-        });
-
-        res.on('end', () => {
-          resolve(data);
-        });
-      });
-
-      req.on('error', (error) => {
-        reject(error);
-      });
-
-      req.end();
-    });
-  };
-
-  try {
-    const data = await fetchData(apiUrl, apiKey);
-    // Send the image data as response
-    res.writeHead(200, {
-      'Content-Type': 'image/png',
-      'Content-Length': data.length
-    });
-    res.end(data, 'binary');
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal Server Error');
-  }
+  fetch(apiUrl)
+  .then(res => res.json())
+  .then(data => {
+    // console.log(data)
+data.forEach(res=>{
+    const date = res.date.slice(0,10).split("-")
+    const image = res.image
+   imageArr.push([`https://epic.gsfc.nasa.gov/archive/natural/${date[0]}/${date[1]}/${date[2]}/png/${image}.png`,res])
+})
+    res.json(imageArr)
+  })
 };
 
 module.exports = {
