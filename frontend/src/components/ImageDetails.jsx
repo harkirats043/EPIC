@@ -1,0 +1,2 @@
+// ImageDetails.jsx
+
