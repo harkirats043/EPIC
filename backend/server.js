@@ -1,15 +1,15 @@
+// initialize .env variables
+require("dotenv").config();
+require('./config/db.connection')
 ///////////////////////////////
 // DEPENDENCIES
 const cors = require('cors')
 const morgan = require('morgan')
 const express = require('express');
-const mongoose = require('mongoose');
 const imageRoutes = require('./routes/imageRoutes');
-// initialize .env variables
-require("dotenv").config();
 
 // pull PORT from .env, give default value of 4000 and establish DB Connection
-const { PORT } = process.env;
+const { PORT , } = process.env;
 
 // create application object
 const app = express();
