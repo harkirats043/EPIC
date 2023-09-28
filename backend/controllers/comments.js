@@ -24,8 +24,23 @@ async function deleteComment(req, res) {
     res.status(500).json({ message: error.message });
   }
 }
+ 
+async function getAllComments(req,res){
+try{
+const {imageId} = req.params;
+const allComments = await Comment.find({imageId:imageId});
+if (!allComments.length) {
+  return res.status(404).json({ message: ' No Comment found for this Image' });
+}
+res.json(allComments);
+}catch(error){
+  res.status(500).json({ message: error.message });
+}
+}
+
 
 module.exports = {
   addComment,
-  deleteComment
+  deleteComment,
+  getAllComments
 };

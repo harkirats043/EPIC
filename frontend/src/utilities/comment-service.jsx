@@ -17,3 +17,20 @@ export async function create(data){
     }
 }
 
+export async function getAllComments(id){
+    try{ 
+    const res = await fetch(`http://localhost:4000/api/comments/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+    if (res.ok) {
+        return res.json()
+    }
+
+    }
+catch(err){
+    throw new Error("Invalid request")
+}
+}

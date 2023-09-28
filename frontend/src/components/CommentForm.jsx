@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {create} from "../utilities/comment-service";
 
-export default function CommentForm({imageId}){
+export default function CommentForm({imageId,setAddedComment}){
     const [newForm,setNewForm] = useState({
         comment : " ",
         imageId: imageId
@@ -20,7 +20,7 @@ async function handleSubmit(e) {
         comment : " ",
         imageId: imageId
     })
-
+setAddedComment(prevState=>!prevState)
 }
 return (
     <section className="border p-4 text-center">

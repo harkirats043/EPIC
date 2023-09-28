@@ -20,6 +20,7 @@ const Earth = (props) => {
   };
 
   const handleImageClick = (image) => {
+    console.log(image)
     setSelectedImage(image);
   };
 
