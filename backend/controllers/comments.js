@@ -1,13 +1,12 @@
-// commentController.js
-
 const Comment = require('../models/comments');
 
 async function addComment(req, res) {
   try {
-    const { imageId, text } = req.body;
-    const comment = new Comment({ imageId, text });
-    await comment.save();
-    res.status(201).json({ message: 'Comment added successfully', comment });
+    console.log(req.body)
+    const { imageId, comment } = req.body;
+    const newComment = new Comment({ imageId, comment });
+    await newComment.save();
+    res.status(201).json({ message: 'Comment added successfully', newComment });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

@@ -3,11 +3,10 @@ const mongoose = require("mongoose");
 const commentSchema = new mongoose.Schema(
     {
     imageId : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref : "image",
+        type:String,
         required: true
     },
-    body:{
+    comment:{
         type: String,
         max: 500,
         required: true,

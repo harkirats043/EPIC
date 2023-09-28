@@ -1,5 +1,4 @@
 require("dotenv").config();
-// const https = require('https');
 const apiKey = process.env.API_KEY;
 
 const getAllImages = async (req, res) => {
@@ -21,5 +20,4 @@ data.forEach(res=>{
 
 module.exports = {
   getAllImages,
-  // Add other exported functions
 };

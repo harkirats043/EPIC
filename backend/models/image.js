@@ -8,7 +8,6 @@ const imageSchema = new mongoose.Schema({
     lat: Number,
     lon: Number
   },
-  // Add other properties as needed
 });
 
 const Image = mongoose.model('Image', imageSchema);
