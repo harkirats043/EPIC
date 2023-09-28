@@ -7,7 +7,7 @@ const ImageDetail = ({ image }) => {
     <div className=''>
     <img className="profile-image" src={image[0]} alt="Nasa Pictures" />
     <div className="overflow-x-auto">
-        <table className="min-w-full border border-gray-300">
+        <table className="min-w-full border-2 border-solid border-indigo-500 mt-4 ">
             <tbody className="bg-gray-100">
                 <tr>
                     <td className="p-2">Caption</td>
