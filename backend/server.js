@@ -8,10 +8,9 @@ const morgan = require('morgan')
 const express = require('express');
 const imageRoutes = require('./routes/imageRoutes');
 const commentRoutes = require('./routes/comments');
-// pull PORT from .env, give default value of 4000 and establish DB Connection
 const { PORT , } = process.env;
 
-// create application object
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -24,8 +23,8 @@ app.use(function(req, res, next) {
 app.use('/api', imageRoutes);
 app.use('/api', commentRoutes);
 
- // to minimize cors errors, open access to all origins
-app.use(morgan("dev")); // logging for development
+ 
+app.use(morgan("dev")); 
 
 
 ///////////////////////////////

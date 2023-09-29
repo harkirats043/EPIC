@@ -1,8 +1,4 @@
-///////////////////////////////
-// DEPENDENCIES
-////////////////////////////////
 
-// pull PORT from .env, give default value of 4000
 const mongoose = require('mongoose');
 const {DATABASE_URI} = process.env
 

@@ -5,7 +5,7 @@ EPIC provides full disc imagery of the Earth and captures unique perspectives of
 
 ## LINK
 
-[Link]()
+[Link](https://cheerful-pixie-807170.netlify.app/)
 
 ## Screenshots
 
@@ -18,7 +18,9 @@ EPIC provides full disc imagery of the Earth and captures unique perspectives of
    (Mongo,Express.js,React and Node.js)
 - API's
 - Tailwind
-- 0Auth
+- Netlifly 
+- Heroku 
+- 
 
 ## IceBox Features
 -
