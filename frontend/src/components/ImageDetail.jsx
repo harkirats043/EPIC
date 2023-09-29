@@ -91,7 +91,11 @@ const [addedComment,setAddedComment] = useState(false)
         </table>
     </div>
     <CommentForm imageId={image[1].identifier} setAddedComment={setAddedComment} />
-   {userComments}
+    <table className="min-w-full border-2 mt-4 ml-10 mr-10 p-8">
+          <tbody className="bg-gray-100 p-12">
+            {userComments}
+          </tbody>
+        </table>
 </div>
 
   );
