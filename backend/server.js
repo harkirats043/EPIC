@@ -14,6 +14,8 @@ const { PORT , } = process.env;
 // create application object
 const app = express();
 app.use(express.json());
+app.use(cors());
+
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -22,7 +24,7 @@ app.use(function(req, res, next) {
 app.use('/api', imageRoutes);
 app.use('/api', commentRoutes);
 
-app.use(cors()); // to minimize cors errors, open access to all origins
+ // to minimize cors errors, open access to all origins
 app.use(morgan("dev")); // logging for development
 
 
