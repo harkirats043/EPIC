@@ -6,7 +6,7 @@ const Earth = (props) => {
   const [earth, setEarth] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null); 
 
-  const BASE_URL = "https://epic-c0d17d4b336e.herokuapp.com/api/images";
+  const BASE_URL = "https://epicproject-71bd7b132065.herokuapp.com/api/images";
 
   const getAllImages = async () => {
     try {

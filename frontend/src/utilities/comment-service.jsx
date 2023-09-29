@@ -2,7 +2,7 @@
 export async function create(data){
     try {
         console.log(process.env.REACT_APP_BASE_URL)
-        const res = await fetch(`https://epic-c0d17d4b336e.herokuapp.com/api/comments`, {
+        const res = await fetch(`https://epicproject-71bd7b132065.herokuapp.com/api/comments`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -19,7 +19,7 @@ export async function create(data){
 
 export async function getAllComments(id){
     try{ 
-    const res = await fetch(`https://epic-c0d17d4b336e.herokuapp.com/api/comments/${id}`, {
+    const res = await fetch(`https://epicproject-71bd7b132065.herokuapp.com/api/comments/${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
