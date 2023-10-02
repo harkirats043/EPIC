@@ -1,7 +1,6 @@
 # EPIC
 
-EPIC (Earth Polychromatic Imaging Camera)
-EPIC provides full disc imagery of the Earth and captures unique perspectives of certain astronomical events such as lunar transits and centroid coordinates.
+The EPIC (Earth Polychromatic Imaging Camera) captures mesmerizing images of our planet from NASA's DSCOVR satellite. Positioned a million miles away, it provides a unique vantage point, showcasing Earth's beauty and dynamism. These polygraphic images offer a comprehensive view of our planet, capturing its vibrant hues and ever-changing landscapes. The EPIC Earth imagery stands as a testament to the marvels of modern technology and the boundless wonders of our home planet.
 
 ## LINK
 
@@ -9,6 +8,12 @@ EPIC provides full disc imagery of the Earth and captures unique perspectives of
 
 ## Screenshots
 
+![Alt text](./images/image.png)
+-------------------------------
+![Alt text](./images/image-1.png)
+--------------------------------
+![Alt text](./images/image-2.png)
+--------------------------------
 
 ## How to Use the App
 
@@ -20,13 +25,12 @@ EPIC provides full disc imagery of the Earth and captures unique perspectives of
 - Tailwind
 - Netlifly 
 - Heroku 
-- 
 
 ## IceBox Features
--
-- 
--
-- 
+- Able to edit or delete comments
+- Able to more planets to list
+- Able to calculate Age on each planet 
+- Able to see Weather on mars
 
 ## Resources
 - [NASA - Free API's](https://api.nasa.gov/)
